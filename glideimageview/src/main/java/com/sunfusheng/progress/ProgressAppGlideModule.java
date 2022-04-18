@@ -9,6 +9,8 @@ import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.integration.okhttp3.OkHttpUrlLoader;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.AppGlideModule;
+import com.sunfusheng.glide.GlideThumb;
+import com.sunfusheng.glide.PhotoModelLoader;
 
 import java.io.InputStream;
 
@@ -21,5 +23,7 @@ public class ProgressAppGlideModule extends AppGlideModule {
     public void registerComponents(@NonNull Context context, @NonNull Glide glide, @NonNull Registry registry) {
         super.registerComponents(context, glide, registry);
         registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(ProgressManager.getOkHttpClient()));
+        registry.append(GlideThumb.class, InputStream.class, new PhotoModelLoader.Factory());
+
     }
 }

@@ -7,9 +7,12 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sunfusheng.GlideImageView;
+import com.sunfusheng.glide.GlideThumb;
 import com.sunfusheng.glideimageview.sample.about.AboutActivity;
 import com.sunfusheng.glideimageview.sample.image.SingleImageActivity;
 import com.sunfusheng.progress.CircleProgressView;
@@ -114,6 +117,13 @@ public class MainActivity extends BaseActivity {
     line2();
     line3();
     line4();
+
+  ImageView imageView= findViewById(R.id.img);
+
+    Glide.with(imageView)
+            .load(new GlideThumb("https://shangheacn.oss-cn-chengdu.aliyuncs.com/somhe/acn/20220418/a21b9d259a7f4251b89c49bb0ad58795/微信图片_20211111135103.jpg"))
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .into(imageView);
   }
 
   private void line1() {
