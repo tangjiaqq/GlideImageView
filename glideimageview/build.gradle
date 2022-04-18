@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
@@ -35,11 +35,11 @@ dependencies {
     api 'com.github.bumptech.glide:okhttp3-integration:' + GLIDE_VERSION
 }
 
-publish {
-    userOrg = 'sfsheng0322'
-    groupId = 'com.sunfusheng'
-    artifactId = 'GlideImageView'
-    publishVersion = VERSION_NAME
-    desc = 'GlideImageView is an image loading library which you can listen to the progress of loading.'
-    website = 'https://github.com/sunfusheng/GlideImageView'
-}
+//publish {
+//    userOrg = 'sfsheng0322'
+//    groupId = 'com.sunfusheng'
+//    artifactId = 'GlideImageView'
+//    publishVersion = VERSION_NAME
+//    desc = 'GlideImageView is an image loading library which you can listen to the progress of loading.'
+//    website = 'https://github.com/sunfusheng/GlideImageView'
+//}
