@@ -4,8 +4,6 @@ buildscript {
         jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
-        maven { url 'https://maven.google.com' }
-        maven { url 'https://dl.bintray.com/sfsheng0322/maven' }
     }
 
     dependencies {
@@ -22,8 +20,6 @@ allprojects {
         jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
-        maven { url 'https://maven.google.com' }
-        maven { url 'https://dl.bintray.com/sfsheng0322/maven' }
     }
 
     ext {
